@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html xmlns:th="https://www.thymeleaf.org" 
+    th:replace="~{fragments/layout :: layout (~{::body},'customer')}">
+
+<body>
+
+    <div class="container">
+        <div class="row">
+          <div class="col-lg-10 mt-5 mb-5">
+            <h2>Customer</h2><br/>
+            <a href="/customer/create">Create</a>
+            <table id="example" class="table table-bordered table-responsive" style="width: 100%">
+              <thead>
+                <tr>
+
+                  <th>Name</th>
+                  <th>LastName</th>
+                  <th>Documento de Identidad</th>
+                  <th>Fecha de nacimiento</th>
+                  <th>Email</th>
+                  <th>Dirección</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr th:each="item : ${customers}">
+                
+                  <td th:text="${item.name}"></td>
+                  <td th:text="${item.lastname}"></td>
+                  <td th:text="${item.documentID}"> </td>
+                  <td th:text="${item.birthdate}"> </td>
+                  <td th:text="${item.email}"> </td>
+                  <td th:text="${item.address}"> </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+    </div>
+
+</body>
+</html>
