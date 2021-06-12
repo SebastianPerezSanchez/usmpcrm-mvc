@@ -2,6 +2,7 @@ package usmpcrm.mvc.usmpcrmmvc.integration.api;
 
 import java.util.List;
 
+import usmpcrm.mvc.usmpcrmmvc.dto.Complaint;
 import usmpcrm.mvc.usmpcrmmvc.dto.Customer;
 import usmpcrm.mvc.usmpcrmmvc.dto.Rating;
 import retrofit2.Call;
@@ -16,4 +17,7 @@ public interface GDHAPIRetrofit {
     
     @GET("api/customer/")
     Call<List<Customer>> getCustomers();
+
+    @GET("api/complaint/")
+    Call<List<Complaint>> getComplaints();
 }

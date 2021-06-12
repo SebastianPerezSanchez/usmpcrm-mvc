@@ -1,28 +1,31 @@
 <!DOCTYPE html>
 
 <html xmlns:th="https://www.thymeleaf.org" 
-    th:replace="~{fragments/layout :: layout (~{::body},'rating')}">
+    th:replace="~{fragments/layout :: layout (~{::body},'complaint')}">
 
 <body>
 
     <div class="container">
         <div class="row">
           <div class="col-lg-10 mt-5 mb-5">
-            <h2>Ratings</h2><br/>
-            <a href="/rating/create">Create</a>
+            <h2>Customer</h2><br/>
+            <a href="/complaint/create">Create</a>
             <table id="example" class="table table-bordered table-responsive" style="width: 100%">
               <thead>
                 <tr>
-                  <th>#</th>
-                  <th>Rating</th>
-                  <th>Comments</th>
+                  <th>id</th>
+                  <th>Subject</th>
+                  <th>Explanation</th>
+                  <th>Date</th>
                 </tr>
               </thead>
               <tbody>
-                <tr th:each="item : ${ratings}">
+                <tr th:each="item : ${complaints}">
                   <td th:text="${item.id}"></td>
-                  <td th:text="${item.rateit}"></td>
-                  <td th:text="${item.comments}"></td>
+                  <td th:text="${item.subject}"></td>
+                  <td th:text="${item.explanation}"></td>
+                  <td th:text="${item.date}"> </td>
+            
                 </tr>
               </tbody>
             </table>

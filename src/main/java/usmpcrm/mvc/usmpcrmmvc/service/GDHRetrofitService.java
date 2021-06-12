@@ -5,6 +5,8 @@ import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 import java.util.List;
+
+import usmpcrm.mvc.usmpcrmmvc.dto.Complaint;
 import usmpcrm.mvc.usmpcrmmvc.dto.Customer;
 import usmpcrm.mvc.usmpcrmmvc.dto.Rating;
 import usmpcrm.mvc.usmpcrmmvc.integration.api.GDHAPIRetrofit;
@@ -50,6 +52,17 @@ public class GDHRetrofitService {
             e.printStackTrace();
         }
 
+        return response.body();
+    }
+
+    public List<Complaint> queryComplaintExternal() {
+        Call<List<Complaint>> retrofitCall = gdhAPI.getComplaints();
+        Response<List<Complaint>> response = null;
+        try {
+            response = retrofitCall.execute();
+        } catch (IOException e){
+            e.printStackTrace();
+        }
         return response.body();
     }
 
