@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html xmlns:th="https://www.thymeleaf.org" 
+    th:replace="~{fragments/layout :: layout (~{::body},'rating dashboard')}">
+<body>
+
+    <div class="row main-content">
+                <div class="col-sm-3 col-xs-6 sidebar pl-0">
+                    <div class="inner-sidebar mr-3">
+                        <!--Image Avatar-->
+                        <div class="avatar text-center">
+                            <img src="../static/images/crm.jpg" th:src="@{/images/crm.jpg}" alt="" class="rounded-circle" />
+                        </div>
+                        <!--Image Avatar-->
+
+                        <!--Sidebar Navigation Menu-->
+                        <div class="sidebar-menu-container">
+                            <ul class="sidebar-menu mt-4 mb-4">
+                                <li class="parent">
+                                    <a href="#" onclick="toggle_menu('dashboard'); return false" class="">
+                                        <span class="none">Dashboard <i class="fa fa-angle-down pull-right align-bottom"></i></span>
+                                    </a>
+                                    <ul class="children" id="dashboard">
+                                        <li class="child"><a href="/dashboard/index" class="ml-4"><i class="fa fa-angle-right mr-2"></i> General</a></li>
+                                        <li class="child"><a href="/dashboard/customer" class="ml-4"><i class="fa fa-angle-right mr-2"></i> Customer</a></li>
+                                        <li class="child"><a href="/dashboard/complaint" class="ml-4"><i class="fa fa-angle-right mr-2"></i> Complaint</a></li>
+                                        <li class="child"><a href="/dashboard/rating" class="ml-4"><i class="fa fa-angle-right mr-2"></i> Rating</a></li>
+                                    </ul>
+                                </li>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--Sidebar Naigation Menu-->
+                    </div>
+                </div>
+
+                <div class="col-sm-9 col-xs-12 content pt-3 pl-0">
+                    <h5 class="mb-3" ><strong>Rating</strong></h5>
+                     <!--Dashboard widget-->
+                    <div class="mt-1 mb-3 button-container">
+                        <div class="row pl-0">
+                            <div class="col-sm-6 col-12 mb-3">
+                                <div class="bg-yellow border shadow rounded">
+                                    <div class="p-2 text-center">
+                                        <h5 class="mb-0 mt-2 text-light"><small><strong>AVERAGE RATING</strong></small></h5>
+                                        <div id="ratingAvgAll"></div>
+                                    </div>
+                                    <!--<div class="align-bottom">
+                                        <span id="incomeBarCol"></span>
+                                    </div>-->
+                                    <div class="text-center text-light">
+                                        Stars
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-12 mb-3">
+                                <div class="bg-success border shadow rounded">
+                                    <div class="p-2 mb-1 text-center">
+                                        <h5 class="mb-0 mt-2 text-light"><small><strong>AVERAGE RATING THIS MONTH</strong></small></h5>
+                                        <div id="thismonthRating" class="text-white">
+                                        </div>
+                                    </div>
+                                    <!--<div class="align-bottom">
+                                        <span id="profitBarCol"></span>
+                                    </div>-->
+                                    <div class="text-center text-light">
+                                        Stars
+                                    </div>
+                                </div>
+                            </div>
+
+                          
+                        </div>
+                    </div>
+                    <!--/Dashboard widget-->
+
+                    <div class="row mt-3">
+                        <div class="col-sm-6">
+                            <!--Rating Graph-->
+                            <div class="mt-1 mb-3 button-container bg-white border shadow-sm p-3">
+                                <h4 class="mb-3">Count per Ratings</h4><hr>
+                                
+                                    <div id="ratingNumber"style="width: 100%; height: 350px"></div>
+                            
+                            </div>
+                            <!--/Rating Graph-->
+                        </div>
+                        
+                        
+                        <div class="col-sm-6">
+                            <!--Rating Graph-->
+                            <div class="mt-1 mb-3 button-container bg-white border shadow-sm p-3">
+                                <h4 class="mb-3">Count per Ratings</h4><hr>
+                                
+                                    <div id="thismonthRatingchart"style="width: 100%; height: 350px"></div>
+                            
+                            </div>
+                            <!--/Rating Graph-->
+                        </div>
+                    </div>
+
+                    <!--AVG Rating per month Section-->
+                <div class="mt-1 mb-3 p-3 button-container bg-white shadow-sm border">
+                    <h4>Average Rating per Month(current Year)</h4><hr>
+                    <div class="row mb-3">
+                        <div class="col-sm-12 ol-12">
+                            <div id="chart_wrap">
+                                <div id="avgRatingMonth" class="chart"></div>
+                            </div>
+                            <div>
+                                <button id="b1" class="btn btn-outline-primary">Prev.</button>
+                                <button id="b2" class="btn btn-outline-primary">Next</button>
+                                <button id="b3" class="btn btn-outline-primary">Change Zoom</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!--AVG Rating per month Section-->
+
+
+
+
+
+                </div>
+
+
+
+    </div>
+    <script th:src="@{/js/rating.js}"></script>  
+<body>

@@ -8,7 +8,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
 
 import usmpcrm.mvc.usmpcrmmvc.dto.Complaint;
-import usmpcrm.mvc.usmpcrmmvc.dto.Customer;
 import java.util.List;
 
 import org.springframework.stereotype.Service;

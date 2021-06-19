@@ -1,0 +1,333 @@
+
+html {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Quicksand, 'Trebuchet MS', Arial, sans-serif;
+  background-color: #F8FAFD;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+p {
+  margin-bottom: 5px;
+  line-height: 19px !important;
+  -webkit-font-smoothing: antialiased;
+}
+
+a:hover, a:focus {
+  text-decoration: none;
+}
+#chart_wrap {
+  position: relative;
+  height: 600px;
+  overflow:hidden;
+}
+
+#customer_chart {
+  position: relative;
+  height: 600px;
+  overflow:hidden;
+}
+
+.chart {
+  width: 100%; 
+  min-height: 100%;
+}
+
+.bg-light-blue {
+  background: #799CC7;
+}
+
+.bg-red {
+  background: #EA5941;
+}
+
+.bg-green {
+  color: #4CC790;
+}
+
+.bg-theme {
+  background: #0D47A1;
+  color: #fff;
+}
+
+.bg-yellow {
+  background: #cfa01e;
+  color: #fff;
+}
+
+
+/* makes the font 33% larger relative to the icon container */
+
+
+/* Deprecated as of 4.4.0 */
+.pull-right {
+  float: right;
+}
+
+
+.fa-dashboard:before,
+.fa-tachometer:before {
+  content: "\f0e4";
+}
+/*======= General Rules =========*/
+
+/*====== Dasboard CSS Rules =====*/
+
+/*Header CSS */
+
+
+
+
+.notify-icon {
+  width: 46px;
+  height: 46px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.notify-icon i {
+  color: #fff;
+  margin-top: 13px;
+}
+
+.notify-icon_2 {
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.notify-icon_2 i {
+  color: #fff;
+  margin-top: 0px;
+  font-size: 60px;
+}
+
+/* Main Content */
+.main-content {
+  position: relative;
+}
+
+/* Sidebar */
+
+
+
+.sidebar > .inner-sidebar {
+  height: 100%;
+  background: #2E2E3A;
+}
+
+.avatar img {
+  width: 75px;
+  height: 75px;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  border: 3px solid #fff;
+}
+
+.avatar > p {
+  color: #fff;
+}
+
+.sidebar-menu li a {
+  display: block;
+  color: #fff;
+  font-size: 15px;
+  padding: 13px 20px;
+  transition: 300ms;
+}
+
+.sidebar-menu li a:hover {
+  padding-left: 30px;
+}
+
+.sidebar-menu li ul {
+  width: 100%;
+  height: auto;
+  background: #313246;
+  display: none;
+}
+
+
+/* Sidebar */
+
+
+
+/*====== Dasboard CSS Rules =====*/
+
+
+
+
+/*========Chartist chart styles========*/
+
+#lineChartChartist .ct-series-a .ct-line {
+  /* Set the colour of this series line */
+  stroke: #3DC9B0 ;
+  /* Control the thikness of your lines */
+  stroke-width: 4px;
+}
+
+#lineChartChartist .ct-series-a .ct-point {
+  /* Set the colour of this series line */
+  stroke: #3DC9B0;
+  /* Control the thikness of your lines */
+  stroke-width: 10px;
+}
+
+#lineChartChartist .ct-series-b .ct-line {
+  /* Set the colour of this series line */
+  stroke: #3A5276;
+  /* Control the thikness of your lines */
+  stroke-width: 4px;
+}
+
+#lineChartChartist .ct-series-b .ct-point {
+  /* Set the colour of this series line */
+  stroke: #3A5276;
+  /* Control the thikness of your lines */
+  stroke-width: 10px;
+}
+
+#areaChartChartist .ct-series-a .ct-area {
+  fill: #3DC9B0 ;
+}
+
+#areaChartChartist .ct-series-a .ct-line {
+  /* Set the colour of this series line */
+  stroke: #3DC9B0 ;
+  /* Control the thikness of your lines */
+  stroke-width: 3px;
+}
+
+#areaChartChartist .ct-series-a .ct-point {
+  /* Set the colour of this series line */
+  stroke: #3DC9B0 ;
+  /* Control the thikness of your lines */
+  stroke-width: 7px;
+}
+
+#overlapBarchartChartist .ct-series-a .ct-bar {
+  stroke: #3DC9B0;
+}
+
+#overlapBarchartChartist .ct-series-b .ct-bar {
+  stroke: #3A5276;
+}
+
+#costRevenue .ct-series-a .ct-bar {
+  stroke: #65B5C2;
+}
+
+#costRevenue .ct-series-b .ct-bar {
+  stroke: #0D47A1;
+}
+
+#chartContainer .ct-series-a .ct-line {
+  /* Set the colour of this series line */
+  stroke: #65B5C2 ;
+  fill: #65B5C2;
+  /* Control the thikness of your lines */
+  stroke-width: 4px;
+}
+
+#chartContainer .ct-series-a .ct-point {
+  /* Set the colour of this series line */
+  stroke: #65B5C2;
+  /* Control the thikness of your lines */
+  stroke-width: 10px;
+}
+
+#chartContainer .ct-series-b .ct-line {
+  /* Set the colour of this series line */
+  stroke: #23649E;
+  fill: #23649E;
+  /* Control the thikness of your lines */
+  stroke-width: 4px;
+}
+
+#chartContainer .ct-series-b .ct-point {
+  /* Set the colour of this series line */
+  stroke: #23649E;
+  /* Control the thikness of your lines */
+  stroke-width: 10px;
+}
+
+#stackedBarchartChartist .ct-series-a .ct-bar {
+  stroke: #3DC9B0;
+}
+
+#stackedBarchartChartist .ct-series-b .ct-bar {
+  stroke: #3A5276;
+}
+
+#pieChartChartist .ct-chart-pie .ct-label,
+#donutChartChartist .ct-chart-donut .ct-label {
+  color: #fff;
+  fill: #fff;
+}
+
+#pieChartChartist .ct-series-a .ct-slice-pie {
+  stroke: #3A5276;
+  fill: #3A5276;
+}
+
+#pieChartChartist .ct-series-b .ct-slice-pie {
+  stroke: #3DC9B0;
+  fill: #3DC9B0;
+}
+
+#donutChartChartist .ct-series-a .ct-slice-donut-solid {
+  stroke: #3A5276;
+  fill: #3A5276;
+}
+
+#donutChartChartist .ct-series-c .ct-slice-donut-solid {
+  stroke: #3DC9B0;
+  fill: #3DC9B0;
+}
+
+#areaChartFb .ct-series-a .ct-line {
+  /* Set the colour of this series line */
+  stroke: #fff ;
+  /* Control the thikness of your lines */
+  stroke-width: 3px;
+}
+
+#areaChartFb .ct-series-a .ct-point {
+  /* Set the colour of this series line */
+  stroke: #fff;
+  /* Control the thikness of your lines */
+  stroke-width: 0px;
+}
+
+#areaChartFb .ct-labels .ct-label {
+  color: #fff !important;
+}
+
+/*========Chartist chart styles========*/
+
+
+.btn-outline-theme:hover {
+  color: #fff;
+  background: #0D47A1;
+}
+
+.text-theme {
+  color: #0D47A1 !important;
+}
+

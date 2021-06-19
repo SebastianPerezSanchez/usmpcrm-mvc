@@ -7,12 +7,33 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  
   <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" />
   <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min-jsf.css}" />
-  <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap-jsf.css}" />
   <link th:rel="stylesheet" th:href="@{/webjars/font-awesome/css/all.css} " />
   <link th:rel="stylesheet" th:href="@{/webjars/bootstrap-datepicker/css/bootstrap-datepicker.css}" />
   <link th:rel="stylesheet" th:href="@{/webjars/bootstrap-datepicker/css/bootstrap-datepicker.standalone.css}" />
+  <link th:rel="stylesheet" th:href="@{/css/dashboard.css}" />
+  
+
+
+    <script th:src="@{https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js}"></script>
+    <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+    <script th:src="@{/webjars/jquery-ui/jquery-ui.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap-datepicker/js/bootstrap-datepicker.min.js}"></script>
+    <script th:src="@{/webjars/jquery.inputmask/jquery.inputmask.min.js}"></script>    
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script th:src="@{/js/dashboardPage.js}"></script>  
+    
+
+      <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+  <script>
+        feather.replace()
+  </script>
+  
+
 
 </head>
 <body>
@@ -38,7 +59,7 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="#">Dashboard</a>
+            <a class="nav-link" href="/dashboard/index">Dashboard</a>
           </li>
         </ul>
        
@@ -46,7 +67,6 @@
     </nav> 
     
     <div class="container-fluid">
-      <div class="container xd-container">
   
         <th:block th:include="${template}" />
   
@@ -56,14 +76,8 @@
               Copyright @ 2021 CRM - USMP
           </div>
         </div>
-      </div>
-    </div>
 
-    <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
-    <script th:src="@{/webjars/jquery-ui/jquery-ui.min.js}"></script>
-    <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
-    <script th:src="@{/webjars/bootstrap-datepicker/js/bootstrap-datepicker.min.js}"></script>
-    <script th:src="@{/webjars/jquery.inputmask/jquery.inputmask.min.js}"></script>    
+    </div>
 
   </body>
   
